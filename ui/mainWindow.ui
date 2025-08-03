@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>430</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Genshin speaker</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Лого.png</normaloff>Лого.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frameMain">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayoutMain">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frameTitle">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(50, 50, 60);  
+color: white;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayoutTitle">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frameBody">
+           <property name="styleSheet">
+            <string notr="true">#MainWindow
+{
+	border-color: rgb(40, 40, 50);  
+}
+QWidget {  
+	color: white;
+    background-color: rgb(40, 40, 50);  
+	
+}  
+QPushButton {  
+	color:rgb(13, 13, 15);  
+	
+	background-color: rgba(255, 219, 41, 220);
+	border: 1px solid rgba(255, 219, 41, 220);
+	border-radius: 10px;
+	height: 20;
+}
+
+QPushButton:hover {
+	background-color: rgba(255, 219, 41, 255);
+}
+QPushButton:pressed {
+	background-color: rgba(255, 219, 41, 200);
+}
+QScrollBar::vertical {  
+	border: none;  
+	background:  rgb(150,150,150);
+	margin: 3px 0 3px 0;
+	border-radius: 7px;
+}  
+QScrollBar::handle:vertical {  
+	background: rgba(255, 219, 41, 200); 
+	border-radius: 8px;
+}  
+QScrollBar::handle:vertical:hover {  
+	background: rgba(255, 180, 41, 255);
+}  
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {  
+	background: none; 
+}  
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {  
+	background: none;
+}  
+QSlider::handle{
+	 background-color: #E1C22A;
+	width: 10px; 
+	border-radius: 5px;
+}
+QSlider::handle::hover{
+	 background-color: rgba(255, 180, 41, 255);
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <property name="spacing">
+             <number>18</number>
+            </property>
+            <property name="topMargin">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Запуск системы озвучки</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBar">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QProgressBar {
+    background-color: rgb(150,150,150);  
+    border-radius: 10px;
+	text-align: center;
+	color: black;
+
+    }
+QProgressBar::chunk {
+    background-color: rgba(255, 219, 41);
+    border-radius: 10px;
+	
+} </string>
+              </property>
+              <property name="value">
+               <number>10</number>
+              </property>
+              <property name="format">
+               <string>%p%</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="startStopVoicerBtn">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Остановить озвучку</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../data/Logos/iconPause.png</normaloff>../data/Logos/iconPause.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frameSettingsBase">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>12</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>3</number>
+               </property>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayoutSettingsBase">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+                 </property>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
