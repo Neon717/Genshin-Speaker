@@ -113,7 +113,7 @@ class WindowApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
         self.genshinVoicer = GenshinVoicer()
 
         if settings.get("proc"):
-            if settings.get("proc") == 'cuda':
+            if settings.get("proc") == 'cuda' and self.genshinVoicer.isCudaAvailable():
                 self.frameSettingsForm.GPU_rBtn.setChecked(True)
                 self.frameSettingsForm.CPU_rBtn.setChecked(False)
                 self.genshinVoicer.proc = 'cuda'
@@ -135,7 +135,7 @@ class WindowApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
                 json.dump(settings, f, ensure_ascii=False)
 
         self.genshinVoicer.cudaAvailable.connect(self.changeCudaShow)
-
+        self.changeCudaShow(self.genshinVoicer.isCudaAvailable())
 
         if isAdmin():
             self.frameSettingsForm.switchDialCheckBox.setEnabled(True)

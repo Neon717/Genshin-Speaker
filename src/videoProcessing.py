@@ -14,6 +14,7 @@ import pyautogui
 import random
 from PIL import ImageFont, ImageDraw, Image
 import sounddevice as sd
+import textToSpeach
 
 DEFAULT_SIZE = 1080
 
@@ -33,19 +34,21 @@ class GenshinVoicer(QObject):
     detectPlayerName = False
     playerNameForDialHeaderImg = None
     playerNameForDialHeaderImgSmall = None
-
+    global textToSpeach
 
     _showCVWindows = False
+
+    def __init__(self):
+        super().__init__()
+        self.allObjectsCreated.emit()
+        self.cudaAvailable.emit(textToSpeach.isCudaAvailable())
 
     def run(self):
         self.runVideoDetect()
         self.finished.emit()
 
     def runVideoDetect(self):
-        global textToSpeach
-        import textToSpeach
-        self.allObjectsCreated.emit()
-        self.cudaAvailable.emit(textToSpeach.isCudaAvailable())
+
 
         self.progress.emit(10)
         textToSpeach.init(self.proc)
